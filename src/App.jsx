@@ -1,4 +1,4 @@
-import Search from "./Components/search.jsx";
+import Search from "./Components/Search.jsx";
 import { useState, useEffect } from "react";
 import Spinner from "./Components/spinner.jsx";
 import MovieCard from "./Components/MovieCard.jsx";
