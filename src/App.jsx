@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Spinner from "./Components/Spinner.jsx";
 import MovieCard from "./Components/MovieCard.jsx";
 import { useDebounce } from "react-use";
-import { geTrendingMovies, updateSearchCount } from "./appwrite.js";
+import { getTrendingMovies, updateSearchCount } from "./appwrite.js";
 const API_BASE_URL = "https://api.themoviedb.org/3";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -68,7 +68,7 @@ const App = () => {
 
   const loadTrendingMovies = async () => {
     try {
-      const movies = await geTrendingMovies();
+      const movies = await getTrendingMovies();
       setTrendingMovies(movies);
     } catch (error) {
       console.error("Error fetching trending movies:", error);

@@ -40,7 +40,7 @@ export const updateSearchCount = async (searchTerm, movie) => {
     console.error(error);
   }
 };
-export const getrendingMovies = async () => {
+export const getTrendingMovies = async () => {
   try {
     const result = await databases.listDocuments(
       DATABASE_ID,
